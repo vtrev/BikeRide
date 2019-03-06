@@ -4,9 +4,6 @@ public class Bicycle {
 
     private int speed;
 
-    public void setSpeed(int s){
-        this.speed = s;
-    }
 
     public void accelerate(){
         this.speed = this.speed+5;

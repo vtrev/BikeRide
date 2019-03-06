@@ -11,25 +11,27 @@ public class BicycleTest {
     @Test
     void shouldAccelerate(){
         Bicycle b = new Bicycle();
-        b.setSpeed(1);
-        b.accelerate();
-        assertEquals(b.currentSpeed(),6);
+        for(int i=0;i<5;i++){
+            b.accelerate();
+        }
+        assertEquals(b.currentSpeed(),35);
     }
 
     @Test
     void shouldBrake() {
-
         Bicycle b1 = new Bicycle();
-        b1.setSpeed(10);
+        for(int i = 0 ;i < 3; i++){
+            b1.accelerate();
+        }
         b1.brake();
-        assertEquals(b1.currentSpeed(),7);
+        assertEquals(b1.currentSpeed(),12);
     }
 
 
     @Test
     void shouldStop() {
         Bicycle b2 = new Bicycle();
-        b2.setSpeed(44);
+        b2.accelerate();
         b2.stop();
         assertEquals(b2.currentSpeed(),0);
     }
