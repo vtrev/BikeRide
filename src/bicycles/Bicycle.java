@@ -6,11 +6,11 @@ public class Bicycle {
 
 
     public void accelerate(){
-        this.speed = this.speed+5;
+        this.speed += 5;
     }
 
     public void brake(){
-        this.speed = this.speed - 3;
+        this.speed -= 3;
     }
 
     public int currentSpeed(){
