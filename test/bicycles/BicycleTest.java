@@ -14,7 +14,7 @@ public class BicycleTest {
         for(int i=0;i<5;i++){
             b.accelerate();
         }
-        assertEquals(b.currentSpeed(),35);
+        assertEquals(b.currentSpeed(),25);
     }
 
     @Test
