@@ -10,7 +10,8 @@ public class Bicycle {
     }
 
     public void brake(){
-        this.speed -= 3;
+        if(this.speed >= 3){
+        this.speed -= 3;}
     }
 
     public int currentSpeed(){
