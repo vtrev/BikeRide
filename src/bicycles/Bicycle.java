@@ -1,25 +1,13 @@
 package bicycles;
 
-public class Bicycle {
+public interface Bicycle {
 
-    private int speed;
+     void accelerate();
 
+     void brake();
 
-    public void accelerate(){
-        this.speed += 5;
-    }
+     int currentSpeed();
 
-    public void brake(){
-        if(this.speed >= 3){
-        this.speed -= 3;}
-    }
-
-    public int currentSpeed(){
-        return this.speed;
-    }
-
-    public void stop(){
-        this.speed = 0;
-    }
+     void stop();
 
 }
