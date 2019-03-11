@@ -1,6 +1,6 @@
 package bicycles;
 
-public interface Bicycle {
+ public interface Bicycle {
 
      void accelerate();
 

@@ -18,7 +18,7 @@ class MountainBikeTest {
         for(int i=0;i<4;i++){
         mountainBike.accelerate();
         }
-        assertEquals(mountainBike.currentSpeed(),44);
+        assertEquals(mountainBike.currentSpeed(),20);
     }
 
     @Test
@@ -28,7 +28,17 @@ class MountainBikeTest {
             mountainBike.accelerate();
         }
         mountainBike.brake();
-        assertEquals(mountainBike.currentSpeed(),29);
+        assertEquals(mountainBike.currentSpeed(),12);
+    }
+    @Test
+    void shouldNotBrakeIntoNegatives(){
+        Bicycle mountainBike = new MountainBike();
+        mountainBike.accelerate();
+        for(int i=0;i<4;i++){
+            mountainBike.brake();
+        }
+        assertEquals(mountainBike.currentSpeed(),0);
+
     }
 
     @Test

@@ -19,7 +19,7 @@ class RoadBikeTest {
         for(int i=0;i<3;i++){
             roadBike.accelerate();
         }
-        assertEquals(roadBike.currentSpeed(),15);
+        assertEquals(roadBike.currentSpeed(),33);
     }
 
     @Test
@@ -29,7 +29,17 @@ class RoadBikeTest {
             roadBike.accelerate();
         }
         roadBike.brake();
-        assertEquals(roadBike.currentSpeed(),22);
+        assertEquals(roadBike.currentSpeed(),51);
+    }
+    @Test
+    void shouldNotBrakeIntoNegatives(){
+        Bicycle roadBike = new RoadBike();
+        roadBike.accelerate();
+        for(int i=0;i<3;i++){
+            roadBike.brake();
+        }
+        assertEquals(roadBike.currentSpeed(),0);
+
     }
 
     @Test
