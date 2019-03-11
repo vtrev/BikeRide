@@ -1,12 +1,11 @@
 package bicycles;
 
-import bicycles.models.MountainBike;
 import bicycles.models.RoadBike;
 import bicycles.models.Tandem;
 import bicycles.rides.CrazyRide;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CrazyRideTest {
 
@@ -18,13 +17,13 @@ class CrazyRideTest {
         assertEquals(crazyRoad.currentSpeed(),271);
     }
 
-    @Test
-    void shouldRideMountainBike(){
-        Bicycle mountainBike = new MountainBike();
-        CrazyRide crazyMountain = new CrazyRide(mountainBike);
-        crazyMountain.ride();
-        assertEquals(crazyMountain.currentSpeed(),122);
-    }
+//    @Test
+//    void shouldRideMountainBike(){
+//        Bicycle mountainBike = new MountainBike();
+//        CrazyRide crazyMountain = new CrazyRide(mountainBike);
+//        crazyMountain.ride();
+//        assertEquals(crazyMountain.currentSpeed(),122);
+//    }
 
     @Test
     void shouldRideTandem(){

@@ -1,22 +1,21 @@
 package bicycles;
 
-import bicycles.models.MountainBike;
 import bicycles.models.RoadBike;
 import bicycles.models.Tandem;
 import bicycles.rides.SlowRide;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SlowRideTest {
 
-    @Test
-    void shouldRideMountainBike() {
-        Bicycle mountainBike = new MountainBike();
-        SlowRide slowMountain = new SlowRide(mountainBike);
-        slowMountain.ride();
-        assertEquals(slowMountain.currentSpeed(),10);
-    }
+    //@Test
+//    void shouldRideMountainBike() {
+//        Bicycle mountainBike = new MountainBike();
+//        SlowRide slowMountain = new SlowRide(mountainBike);
+//        slowMountain.ride();
+//        assertEquals(slowMountain.currentSpeed(),10);
+//    }
 
     @Test
     void shouldRideRoadBike() {
