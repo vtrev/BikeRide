@@ -1,6 +1,4 @@
 package bicycles.rides;
-
-
 import bicycles.Bicycle;
 import bicycles.BikeRide;
 

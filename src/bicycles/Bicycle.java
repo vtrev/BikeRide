@@ -10,4 +10,6 @@ package bicycles;
 
      void stop();
 
+     BicycleType getBicycleType();
+
 }
