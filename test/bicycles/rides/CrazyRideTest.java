@@ -1,10 +1,7 @@
-package bicycles;
+package bicycles.rides;
 
-import bicycles.models.RoadBike;
-import bicycles.models.Tandem;
-import bicycles.rides.CrazyRide;
-import bicycles.specifications.BicycleFromSpec;
-import bicycles.specifications.BicycleSpecification;
+import bicycles.BicycleType;
+import bicycles.specifications.Bike;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,27 +10,25 @@ class CrazyRideTest {
 
     @Test
     void shouldRideRoadBike() {
-        Bicycle roadBike = new RoadBike();
+        Bike roadBike = new Bike(BicycleType.RoadBike);
         CrazyRide crazyRoad = new CrazyRide(roadBike);
         crazyRoad.ride();
         assertEquals(crazyRoad.currentSpeed(),271);
     }
 
-//    @Test
-//    void shouldRideMountainBike(){
-//        Bicycle mountainBike = new MountainBike();
-//        CrazyRide crazyMountain = new CrazyRide(mountainBike);
-//        crazyMountain.ride();
-//        assertEquals(crazyMountain.currentSpeed(),122);
-//    }
+    @Test
+    void shouldRideMountainBike(){
+        Bike mountainBike = new Bike(BicycleType.MountainBike);
+        CrazyRide crazyMountain = new CrazyRide(mountainBike);
+        crazyMountain.ride();
+        assertEquals(crazyMountain.currentSpeed(),122);
+    }
 
     @Test
     void shouldRideTandem(){
-        BicycleSpecification teandemSpecs = new BicycleSpecification(BicycleType.Tandem);
-        Bicycle tandem = new BicycleFromSpec(teandemSpecs);
+        Bike tandem = new Bike(BicycleType.Tandem);
         CrazyRide crazyTandem = new CrazyRide(tandem);
         crazyTandem.ride();
         assertEquals(crazyTandem.currentSpeed(),293);
-
     }
 }

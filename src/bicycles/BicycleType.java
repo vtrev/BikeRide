@@ -1,8 +1,8 @@
 package bicycles;
 public enum BicycleType {
-        RoadBike(11,4),
-        MountainBike(5,3),
-        Tandem(12,7);
+        RoadBike(11,-4),
+        MountainBike(5,-3),
+        Tandem(12,-7);
 
         private int accelerationSpeed;
         private int brakeSpeed;

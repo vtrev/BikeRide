@@ -17,7 +17,6 @@ public abstract class BicycleBase  implements Bicycle {
         return this.speed;
     }
 
-
     @Override
     public void stop(){
         this.speed = 0;
