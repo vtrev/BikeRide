@@ -1,8 +1,8 @@
 package bicycles.rides;
 
 import bicycles.Bicycle;
-import bicycles.BicycleFromSpec;
-import bicycles.BicycleSpecification;
+import bicycles.specifications.BicycleFromSpec;
+import bicycles.specifications.BicycleSpecification;
 import bicycles.BicycleType;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class FunRideTest {
 
     @Test
     void shouldAcceptBikes() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(BicycleType.RoadBike);
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         FunRide funRide = new FunRide(1);
 
@@ -20,8 +20,8 @@ class FunRideTest {
     }
     @Test
     void shouldNotAcceptOverLimitNumberOfBikes(){
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(6, 2, BicycleType.MountainBike);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(BicycleType.RoadBike);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(BicycleType.MountainBike);
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         FunRide funRide = new FunRide(1);
@@ -30,13 +30,12 @@ class FunRideTest {
         assertEquals(funRide.accept(mountainBike),"Bike Rejected");
     }
 
-
     @Test
     void shouldGetCorrectCountForType() {
 
-        BicycleSpecification roadBike1Specs = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        BicycleSpecification mountainBikeSpecs = new BicycleSpecification(14, 2, BicycleType.MountainBike);
-        BicycleSpecification mountainBike1Specs = new BicycleSpecification(16, 2, BicycleType.MountainBike);
+        BicycleSpecification roadBike1Specs = new BicycleSpecification(BicycleType.RoadBike);
+        BicycleSpecification mountainBikeSpecs = new BicycleSpecification(BicycleType.MountainBike);
+        BicycleSpecification mountainBike1Specs = new BicycleSpecification(BicycleType.MountainBike);
 
         BicycleFromSpec roadBike = new BicycleFromSpec(roadBike1Specs);
         BicycleFromSpec mountainBike = new BicycleFromSpec(mountainBikeSpecs);
@@ -53,10 +52,10 @@ class FunRideTest {
     }
 
     @Test
-    void shouoldGetTotalNumberOfBikesEntered() {
-        BicycleSpecification roadBike1Specs = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        BicycleSpecification mountainBikeSpecs = new BicycleSpecification(14, 7, BicycleType.MountainBike);
-        BicycleSpecification mountainBike1Specs = new BicycleSpecification(16, 6, BicycleType.MountainBike);
+    void shouldGetTotalNumberOfBikesEntered() {
+        BicycleSpecification roadBike1Specs = new BicycleSpecification(BicycleType.RoadBike);
+        BicycleSpecification mountainBikeSpecs = new BicycleSpecification(BicycleType.MountainBike);
+        BicycleSpecification mountainBike1Specs = new BicycleSpecification(BicycleType.MountainBike);
 
         BicycleFromSpec roadBike = new BicycleFromSpec(roadBike1Specs);
         BicycleFromSpec mountainBike = new BicycleFromSpec(mountainBikeSpecs);

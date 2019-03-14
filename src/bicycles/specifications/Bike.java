@@ -1,17 +1,17 @@
-package bicycles;
+package bicycles.specifications;
 
-public class BicycleSpecification {
+import bicycles.BicycleType;
+
+public class Bike {
     private int accelerationSpeed;
     private int brakeSpeed;
     private BicycleType bicycleType;
 
-
-    public BicycleSpecification(int accelerationSpeed,int brakeSpeed, BicycleType bicycleType){
+    public Bike(BicycleType bicycleType){
         this.bicycleType = bicycleType;
-        this.accelerationSpeed = accelerationSpeed;
-        this.brakeSpeed = brakeSpeed;
+        this.accelerationSpeed = bicycleType.getAccelerationSpeed();
+        this.brakeSpeed = bicycleType.getBrakeSpeed();
     }
-
     public int getAccelerationSpeed(){
         return this.accelerationSpeed;
     }
