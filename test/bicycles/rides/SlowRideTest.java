@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SlowRideTest {
 
+    //Testing the ride method makes use of the currentSpeed method,hence no tests for the currentSpeed method.
+
     @Test
     void shouldRideMountainBike() {
         Bike mountainBike = new Bike(BicycleType.MountainBike);
@@ -33,7 +35,4 @@ class SlowRideTest {
 
     }
 
-    @Test
-    void currentSpeed() {
-    }
 }
