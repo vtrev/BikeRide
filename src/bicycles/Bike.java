@@ -1,7 +1,4 @@
-package bicycles.specifications;
-
-import bicycles.BicycleBase;
-import bicycles.BicycleType;
+package bicycles;
 
 public class Bike extends BicycleBase {
     private int accelerationSpeed;
