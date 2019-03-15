@@ -2,12 +2,13 @@ package bicycles.rides;
 
 import bicycles.Bicycle;
 import bicycles.BicycleType;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class FunRide {
-
-    private ArrayList<Bicycle> bikeList= new ArrayList<Bicycle>();
-    private int maxBikeIntake = 0;
+    private List<Bicycle> bikeList = new ArrayList<Bicycle>();
+    private int maxBikeIntake;
 
     public FunRide(int maxBikeIn){
         this.maxBikeIntake = maxBikeIn;
