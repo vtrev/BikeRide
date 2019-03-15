@@ -13,25 +13,25 @@ class SlowRideTest {
     @Test
     void shouldRideMountainBike() {
         Bike mountainBike = new Bike(BicycleType.MountainBike);
-        SlowRide slowMountain = new SlowRide(mountainBike);
-        slowMountain.ride();
-        assertEquals(slowMountain.currentSpeed(),10);
+        SlowRide slowMountainRide = new SlowRide(mountainBike);
+        slowMountainRide.ride();
+        assertEquals(slowMountainRide.currentSpeed(),10);
     }
 
     @Test
     void shouldRideRoadBike() {
         Bike roadBike = new Bike(BicycleType.RoadBike);
-        SlowRide slowRoad = new SlowRide(roadBike);
-        slowRoad.ride();
-        assertEquals(slowRoad.currentSpeed(),35);
+        SlowRide slowRoadRide = new SlowRide(roadBike);
+        slowRoadRide.ride();
+        assertEquals(slowRoadRide.currentSpeed(),35);
     }
 
     @Test
     void shouldRideTandem(){
         Bike tandem = new Bike(BicycleType.Tandem);
-        SlowRide slowTandem = new SlowRide(tandem);
-        slowTandem.ride();
-        assertEquals(slowTandem.currentSpeed(),25);
+        SlowRide slowTandemRide = new SlowRide(tandem);
+        slowTandemRide.ride();
+        assertEquals(slowTandemRide.currentSpeed(),25);
 
     }
 
